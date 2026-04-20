@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Hub v2.5</title>
+    <title>Архив ИМСИТА</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
@@ -11,7 +11,6 @@
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5); border-color: rgba(59, 130, 246, 0.4); }
         .subj-btn { border: 1px solid rgba(255,255,255,0.05); cursor: pointer; transition: all 0.2s; }
-        .subj-btn:hover { border-color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
         .subj-btn.active-subj { background: #3b82f6; border-color: #3b82f6; color: white; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
         .stat-card { cursor: pointer; transition: all 0.3s; }
         .stat-active { border: 1px solid #3b82f6; background: rgba(59, 130, 246, 0.15); }
@@ -21,10 +20,10 @@
     <div class="max-w-6xl mx-auto px-4 py-12">
         
         <header class="text-center mb-12 animate__animated animate__fadeInDown">
-            <h1 class="text-6xl font-black mb-4 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-500 uppercase">
-                Nexus<span class="text-blue-500">Hub</span>
+            <h1 class="text-5xl md:text-6xl font-black mb-4 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-500 uppercase">
+                Архив<span class="text-blue-500"> ИМСИТА</span>
             </h1>
-            <p class="text-slate-400 text-lg">Единый репозиторий: 3 группы, все предметы.</p>
+            <p class="text-slate-400 text-lg italic">Единый репозиторий: все предметы и проекты.</p>
         </header>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 animate__animated animate__fadeInUp">
@@ -47,7 +46,7 @@
         </div>
 
         <div class="relative mb-8 animate__animated animate__fadeIn">
-            <input type="text" id="search" placeholder="Поиск по теме..." 
+            <input type="text" id="search" placeholder="Поиск по названию или предмету..." 
                    class="glass w-full px-6 py-4 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none text-lg transition-all">
         </div>
 
@@ -58,8 +57,8 @@
                 <button onclick="filterBySubject('Биология')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Биология</button>
                 <button onclick="filterBySubject('География')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">География</button>
                 <button onclick="filterBySubject('Индивидуальный проект')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider text-orange-400 border-orange-500/20">Индивидуальный проект</button>
-                <button onclick="filterBySubject('Информатика')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Информатика</button>
                 <button onclick="filterBySubject('Иностранный язык')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Иностранный язык</button>
+                <button onclick="filterBySubject('Информатика')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Информатика</button>
                 <button onclick="filterBySubject('История')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">История</button>
                 <button onclick="filterBySubject('Литература')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Литература</button>
                 <button onclick="filterBySubject('Математика')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Математика</button>
