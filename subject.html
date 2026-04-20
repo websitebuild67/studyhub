@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Темы и материалы</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root { --neon-color: #bc13fe; }
+        body { background: #000; color: #fff; font-family: sans-serif; min-height: 100vh; }
+        
+        .btn-back { margin-bottom: 30px; display: inline-block; color: var(--neon-color); font-weight: 800; text-transform: uppercase; text-decoration: none; transition: 0.3s; }
+        .btn-back:hover { text-shadow: 0 0 10px var(--neon-color); }
+
+        .topic-card { 
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); 
+            padding: 25px; border-radius: 25px; display: flex; justify-content: space-between; 
+            align-items: center; transition: 0.3s; margin-bottom: 12px;
+        }
+        .topic-card:hover { border-color: var(--neon-color); box-shadow: 0 0 15px var(--neon-color); }
+
+        .neon-text { text-shadow: 0 0 15px var(--neon-color); color: var(--neon-color); }
+        .btn-file { border: 1px solid var(--neon-color); padding: 10px 20px; border-radius: 12px; font-weight: 800; font-size: 11px; text-transform: uppercase; text-decoration: none; color: #fff; transition: 0.3s; }
+        .btn-file:hover { background: var(--neon-color); color: #000; }
+    </style>
+</head>
+<body class="p-8 md:p-16">
+    <div class="max-w-4xl mx-auto">
+        <a href="index.html" class="btn-back">← Назад к списку предметов</a>
+        
+        <header class="mb-10">
+            <h1 id="subj-title" class="text-5xl font-black italic uppercase neon-text">Загрузка...</h1>
+            <p id="sect-label" class="text-gray-500 font-bold uppercase tracking-widest mt-2">РАЗДЕЛ</p>
+        </header>
+
+        <div id="topics-list" class="animate__animated animate__fadeInUp">
+            </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const type = params.get('type');
+
+        document.getElementById('subj-title').innerText = name;
+        document.getElementById('sect-label').innerText = type === 'лекция' ? 'ЛЕКЦИИ' : 'ПРАКТИКИ';
+
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => {
+                // Ищем в базе все темы этого предмета в этом разделе
+                const topics = data.filter(i => 
+                    i.subject === name && 
+                    i.type.toLowerCase().replace('пратика', 'практика') === type.toLowerCase()
+                );
+
+                const list = document.getElementById('topics-list');
+                if (topics.length === 0) {
+                    list.innerHTML = '<div class="opacity-20 text-2xl font-black italic">ТЕМЫ НЕ НАЙДЕНЫ</div>';
+                } else {
+                    list.innerHTML = topics.map(t => `
+                        <div class="topic-card">
+                            <div class="text-lg font-bold uppercase tracking-tight">${t.title}</div>
+                            <a href="${t.link}" target="_blank" class="btn-file">Открыть файл</a>
+                        </div>
+                    `).join('');
+                }
+            });
+    </script>
+</body>
+</html>
