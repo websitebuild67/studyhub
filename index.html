@@ -3,57 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Archive v2.0</title>
+    <title>Nexus Hub v2.5</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         body { background: radial-gradient(circle at top right, #1e293b, #0f172a); min-height: 100vh; }
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5); border-color: rgba(59, 130, 246, 0.4); }
-        .stat-card { cursor: pointer; transition: all 0.3s ease; }
-        .stat-card:hover { background: rgba(59, 130, 246, 0.1); transform: scale(1.02); }
+        .subj-btn { border: 1px solid rgba(255,255,255,0.05); cursor: pointer; transition: all 0.2s; }
+        .subj-btn:hover { border-color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
+        .subj-btn.active-subj { background: #3b82f6; border-color: #3b82f6; color: white; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+        .stat-card { cursor: pointer; transition: all 0.3s; }
         .stat-active { border: 1px solid #3b82f6; background: rgba(59, 130, 246, 0.15); }
     </style>
 </head>
 <body class="text-slate-100 font-sans antialiased">
-    <div class="max-w-5xl mx-auto px-4 py-12">
+    <div class="max-w-6xl mx-auto px-4 py-12">
         
-        <header class="text-center mb-16 animate__animated animate__fadeInDown">
-            <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-4 tracking-widest uppercase">
-                Storage System v2.0
-            </div>
+        <header class="text-center mb-12 animate__animated animate__fadeInDown">
             <h1 class="text-6xl font-black mb-4 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-500 uppercase">
                 Nexus<span class="text-blue-500">Hub</span>
             </h1>
-            <p class="text-slate-400 text-lg max-w-lg mx-auto">Умный репозиторий для хранения практик и лекций.</p>
+            <p class="text-slate-400 text-lg">Единый репозиторий: 3 группы, все предметы.</p>
         </header>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 animate__animated animate__fadeInUp">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 animate__animated animate__fadeInUp">
             <div onclick="filterByType('all')" class="glass p-4 rounded-2xl text-center stat-card stat-active" id="stat-all">
                 <div id="count-total" class="text-2xl font-bold text-blue-400">0</div>
                 <div class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Всего работ</div>
             </div>
-            <div onclick="filterByType('практика')" class="glass p-4 rounded-2xl text-center stat-card border-l-2 border-l-emerald-500/50" id="stat-pract">
+            <div onclick="filterByType('практика')" class="glass p-4 rounded-2xl text-center stat-card border-l-2 border-l-emerald-500" id="stat-pract">
                 <div id="count-pract" class="text-2xl font-bold text-emerald-400">0</div>
                 <div class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Практики</div>
             </div>
-            <div onclick="filterByType('лекция')" class="glass p-4 rounded-2xl text-center stat-card border-l-2 border-l-purple-500/50" id="stat-lect">
+            <div onclick="filterByType('лекция')" class="glass p-4 rounded-2xl text-center stat-card border-l-2 border-l-purple-500" id="stat-lect">
                 <div id="count-lect" class="text-2xl font-bold text-purple-400">0</div>
                 <div class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Лекции</div>
             </div>
-            <div class="glass p-4 rounded-2xl text-center border-l-2 border-l-orange-500/50">
+            <div class="glass p-4 rounded-2xl text-center border-l-2 border-l-orange-500">
                 <div id="count-subj" class="text-2xl font-bold text-orange-400">0</div>
                 <div class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Предметы</div>
             </div>
         </div>
 
-        <div class="relative max-w-2xl mx-auto mb-12 animate__animated animate__fadeIn">
-            <input type="text" id="search" placeholder="Поиск по названию или предмету..." 
-                   class="glass w-full pl-6 pr-4 py-4 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all text-lg">
+        <div class="relative mb-8 animate__animated animate__fadeIn">
+            <input type="text" id="search" placeholder="Поиск по теме..." 
+                   class="glass w-full px-6 py-4 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none text-lg transition-all">
         </div>
 
-        <div id="content" class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-20">
+        <div class="mb-12 animate__animated animate__fadeIn">
+            <h2 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4 ml-1">Фильтр по предметам</h2>
+            <div class="flex flex-wrap gap-2" id="subject-filters">
+                <button onclick="filterBySubject('all')" class="subj-btn active-subj px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Все</button>
+                <button onclick="filterBySubject('Биология')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Биология</button>
+                <button onclick="filterBySubject('География')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">География</button>
+                <button onclick="filterBySubject('Индивидуальный проект')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider text-orange-400 border-orange-500/20">Индивидуальный проект</button>
+                <button onclick="filterBySubject('Информатика')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Информатика</button>
+                <button onclick="filterBySubject('Иностранный язык')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Иностранный язык</button>
+                <button onclick="filterBySubject('История')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">История</button>
+                <button onclick="filterBySubject('Литература')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Литература</button>
+                <button onclick="filterBySubject('Математика')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Математика</button>
+                <button onclick="filterBySubject('Обществознание')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Обществознание</button>
+                <button onclick="filterBySubject('Русский Язык')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Русский Язык</button>
+                <button onclick="filterBySubject('Физика')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Физика</button>
+                <button onclick="filterBySubject('Химия')" class="subj-btn px-4 py-2 rounded-xl glass text-xs font-bold uppercase tracking-wider">Химия</button>
             </div>
+        </div>
+
+        <div id="content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </div>
     <script src="scripts.js"></script>
 </body>

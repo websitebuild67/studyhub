@@ -8,7 +8,8 @@ const counters = {
 };
 
 let database = [];
-let currentFilter = 'all';
+let currentFilter = 'all'; // Тип: практика/лекция
+let currentSubject = 'all'; // Предмет: Физика и т.д.
 
 fetch('data.json')
     .then(res => res.json())
@@ -17,11 +18,8 @@ fetch('data.json')
         updateStats(data);
         render(data);
 
-        searchInput.oninput = () => {
-            applyFilters();
-        };
-    })
-    .catch(err => contentDiv.innerHTML = `<p class="text-red-400 text-center col-span-full">Ошибка: ${err.message}</p>`);
+        searchInput.oninput = () => applyFilters();
+    });
 
 function updateStats(data) {
     counters.total.innerText = data.length;
@@ -32,12 +30,21 @@ function updateStats(data) {
 
 function filterByType(type) {
     currentFilter = type;
-    // Визуальное переключение активной карточки статистики
     document.querySelectorAll('.stat-card').forEach(el => el.classList.remove('stat-active'));
     if(type === 'all') document.getElementById('stat-all').classList.add('stat-active');
     if(type === 'практика') document.getElementById('stat-pract').classList.add('stat-active');
     if(type === 'лекция') document.getElementById('stat-lect').classList.add('stat-active');
-    
+    applyFilters();
+}
+
+function filterBySubject(subject) {
+    currentSubject = subject;
+    document.querySelectorAll('.subj-btn').forEach(btn => {
+        btn.classList.remove('active-subj');
+        if(btn.innerText.toLowerCase() === (subject === 'all' ? 'все' : subject.toLowerCase())) {
+            btn.classList.add('active-subj');
+        }
+    });
     applyFilters();
 }
 
@@ -45,10 +52,9 @@ function applyFilters() {
     const query = searchInput.value.toLowerCase();
     let filtered = database;
 
-    if (currentFilter !== 'all') {
-        filtered = filtered.filter(i => i.type.toLowerCase() === currentFilter);
-    }
-
+    if (currentFilter !== 'all') filtered = filtered.filter(i => i.type.toLowerCase() === currentFilter);
+    if (currentSubject !== 'all') filtered = filtered.filter(i => i.subject === currentSubject);
+    
     filtered = filtered.filter(i => 
         i.title.toLowerCase().includes(query) || i.subject.toLowerCase().includes(query)
     );
@@ -58,28 +64,21 @@ function applyFilters() {
 
 function render(items) {
     if (items.length === 0) {
-        contentDiv.innerHTML = '<p class="text-slate-500 text-center col-span-full py-20">Список пуст или ничего не найдено</p>';
+        contentDiv.innerHTML = '<p class="text-slate-500 text-center col-span-full py-20 animate__animated animate__fadeIn">В этом разделе пока пусто...</p>';
         return;
     }
 
     contentDiv.innerHTML = items.map((item, idx) => `
-        <div class="glass p-6 rounded-3xl card-hover transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: ${idx * 0.05}s">
-            <div class="flex justify-between items-start mb-4">
-                <span class="px-3 py-1 rounded-lg bg-blue-600/20 text-blue-400 text-[10px] font-black uppercase tracking-widest border border-blue-500/20">
-                    ${item.subject}
-                </span>
-                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">${item.type}</span>
+        <div class="glass p-6 rounded-3xl card-hover transition-all animate__animated animate__fadeInUp" style="animation-delay: ${idx * 0.05}s">
+            <div class="flex justify-between items-start mb-4 text-[10px] font-black uppercase tracking-widest">
+                <span class="text-blue-400">${item.subject}</span>
+                <span class="${item.type === 'Проект' ? 'text-orange-400' : 'text-slate-500'}">${item.type}</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-6 leading-tight h-14 overflow-hidden line-clamp-2">${item.title}</h3>
-            <div class="flex items-center justify-between mt-auto">
-                <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-blue-400 border border-slate-700">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                </div>
-                <a href="${item.link}" target="_blank" 
-                   class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-2.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-blue-900/40 active:scale-95">
-                    ОТКРЫТЬ
-                </a>
-            </div>
+            <h3 class="text-lg font-bold text-white mb-6 leading-tight h-12 overflow-hidden">${item.title}</h3>
+            <a href="${item.link}" target="_blank" 
+               class="block w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-bold text-xs text-center transition-all active:scale-95">
+                ОТКРЫТЬ ДОСТУП
+            </a>
         </div>
     `).join('');
 }
