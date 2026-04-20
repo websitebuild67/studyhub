@@ -3,56 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Архив ИМСИТА | Предметы</title>
+    <title>Архив ИМСИТА | PRO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         :root { --neon-color: #ffffff; --bg-dark: #000000; }
         body { background: radial-gradient(circle at center, #111 0%, var(--bg-dark) 100%); min-height: 100vh; color: #fff; transition: all 0.4s ease; overflow-x: hidden; }
 
-        /* Панель стиля */
+        /* Панель выбора цвета */
         .theme-panel { position: fixed; top: 20px; right: 20px; z-index: 100; }
         .theme-btn { background: rgba(0,0,0,0.8); border: 2px solid var(--neon-color); padding: 10px 22px; border-radius: 12px; font-weight: 900; font-size: 11px; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 15px var(--neon-color); transition: 0.3s; }
         .color-menu { display: none; position: absolute; top: 60px; right: 0; background: rgba(0,0,0,0.95); border: 1px solid rgba(255,255,255,0.1); padding: 20px; border-radius: 25px; grid-template-columns: repeat(6, 1fr); gap: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.8); width: 320px; }
         .color-dot { width: 35px; height: 35px; border-radius: 50%; cursor: pointer; border: 2px solid rgba(255,255,255,0.2); box-shadow: 0 0 12px var(--dot-color); background-color: var(--dot-color); transition: 0.3s; }
         .color-dot:hover { transform: scale(1.2); box-shadow: 0 0 25px var(--dot-color); border-color: #fff; }
 
-        /* Заголовки предметов */
-        .subject-block { margin-bottom: 60px; }
-        .subject-title { 
-            font-size: 2.5rem; font-weight: 900; text-transform: uppercase; italic; 
-            margin-bottom: 30px; border-bottom: 2px solid rgba(255,255,255,0.1);
-            display: flex; align-items: center; gap: 20px;
-        }
-        .subject-title::after { content: ""; flex-grow: 1; height: 2px; background: linear-gradient(to right, var(--neon-color), transparent); }
+        /* Кнопки ПЕРЕКЛЮЧАТЕЛИ */
+        .section-tab { cursor: pointer; padding: 25px; border-radius: 30px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; text-align: center; }
+        .section-tab.active { border: 2px solid var(--neon-color); box-shadow: 0 0 30px var(--neon-color); background: rgba(255,255,255,0.05); }
+        .section-tab:hover:not(.active) { background: rgba(255,255,255,0.05); transform: translateY(-3px); }
 
-        /* Подзаголовки Лекции/Практики */
-        .type-header { 
-            display: inline-block; padding: 5px 15px; border-radius: 8px; 
-            background: rgba(255,255,255,0.05); border-left: 3px solid var(--neon-color);
-            font-size: 0.7rem; font-weight: 900; letter-spacing: 2px; 
-            text-transform: uppercase; margin-bottom: 20px; margin-top: 20px;
-            color: var(--neon-color); opacity: 0.8;
-        }
+        /* Карточки (Горизонтальная сетка) */
+        .subjects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
 
-        /* Карточки */
         .glass-card { 
-            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); 
-            padding: 24px; border-radius: 24px; transition: 0.3s; 
-            display: flex; flex-direction: column; min-height: 180px; 
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); 
+            padding: 30px; border-radius: 35px; transition: 0.3s; 
+            text-align: center; display: flex; flex-direction: column; justify-content: space-between;
         }
-        .glass-card:hover { border-color: var(--neon-color); box-shadow: 0 0 20px var(--neon-color); transform: translateY(-5px); }
-        .glass-card h3 { font-size: 1.1rem; font-weight: 700; line-height: 1.4; flex-grow: 1; margin-bottom: 20px; word-wrap: break-word; }
+        .glass-card:hover { border-color: var(--neon-color); box-shadow: 0 0 20px var(--neon-color); transform: scale(1.03); }
+
+        .subject-name { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; italic; margin-bottom: 25px; line-height: 1.2; }
 
         .btn-open { 
-            border: 1px solid rgba(255,255,255,0.1); text-align: center; padding: 12px 0; 
-            border-radius: 15px; font-weight: 800; font-size: 10px; text-transform: uppercase; 
-            transition: 0.3s; 
+            border: 1px solid rgba(255,255,255,0.1); padding: 14px 0; border-radius: 20px; 
+            font-weight: 800; font-size: 11px; text-transform: uppercase; transition: 0.3s; 
         }
         .btn-open:hover { background: var(--neon-color); color: #000; box-shadow: 0 0 15px var(--neon-color); }
 
-        #search { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 20px; padding: 18px 30px; width: 100%; outline: none; }
-        #search:focus { border-color: var(--neon-color); box-shadow: 0 0 20px var(--neon-color); }
+        #search { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 20px; padding: 18px 30px; width: 100%; outline: none; margin-bottom: 40px; }
+        #search:focus { border-color: var(--neon-color); box-shadow: 0 0 15px var(--neon-color); }
         
         .neon-text { color: var(--neon-color); text-shadow: 0 0 10px var(--neon-color); }
     </style>
@@ -71,21 +60,26 @@
             <div class="color-dot" style="--dot-color: #0055ff;" onclick="setTheme('#0055ff')"></div>
             <div class="color-dot" style="--dot-color: #bc13fe;" onclick="setTheme('#bc13fe')"></div>
             <div class="color-dot" style="--dot-color: #ff00ff;" onclick="setTheme('#ff00ff')"></div>
-            <div class="color-dot" style="--dot-color: #00ff88;" onclick="setTheme('#00ff88')"></div>
             </div>
     </div>
 
     <div class="max-w-6xl mx-auto">
-        <header class="text-center mb-16 animate__animated animate__fadeInDown">
-            <h1 class="text-6xl md:text-8xl font-black mb-4 uppercase italic tracking-tighter">Архив<span class="neon-text"> ИМСИТА</span></h1>
-            <p class="text-gray-500 tracking-widest uppercase text-[10px] font-bold opacity-60">Full 4-Month Course Storage</p>
+        <header class="text-center mb-12 animate__animated animate__fadeInDown">
+            <h1 class="text-5xl md:text-7xl font-black mb-4 uppercase italic">Архив<span class="neon-text"> ИМСИТА</span></h1>
         </header>
 
-        <div class="mb-20">
-            <input type="text" id="search" placeholder="Поиск по предметам и темам..." class="animate__animated animate__fadeIn">
+        <div class="grid grid-cols-2 gap-6 mb-10 animate__animated animate__fadeInUp">
+            <div onclick="setSection('практика')" id="tab-pract" class="section-tab active">
+                <div class="text-3xl font-black italic">ПРАКТИКИ</div>
+            </div>
+            <div onclick="setSection('лекция')" id="tab-lect" class="section-tab">
+                <div class="text-3xl font-black italic">ЛЕКЦИИ</div>
+            </div>
         </div>
 
-        <div id="content"></div>
+        <input type="text" id="search" placeholder="Поиск по предметам..." class="animate__animated animate__fadeIn">
+
+        <div id="content" class="subjects-grid"></div>
     </div>
 
     <script src="scripts.js"></script>
