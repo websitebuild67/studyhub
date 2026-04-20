@@ -1,14 +1,56 @@
 [
   {
-    "title": "Тригонометрические функции",
-    "subject": "Математика",
-    "type": "лекция",
-    "link": "#"
-  },
-  {
-    "title": "Лабораторная по механике",
+    "title": "Лабораторная работа №1: Кинематика",
     "subject": "Физика",
     "type": "практика",
-    "link": "#"
+    "link": "https://example.com/phys1"
+  },
+  {
+    "title": "Основы тригонометрии: Конспект",
+    "subject": "Математика",
+    "type": "лекция",
+    "link": "https://example.com/math_lect"
+  },
+  {
+    "title": "Алгоритмы и структуры данных",
+    "subject": "Информатика",
+    "type": "лекция",
+    "link": "https://example.com/it_theory"
+  },
+  {
+    "title": "Практикум: Создание БД в Termux",
+    "subject": "Информатика",
+    "type": "практика",
+    "link": "https://example.com/it_pract"
+  },
+  {
+    "title": "История России: XX век",
+    "subject": "История",
+    "type": "лекция",
+    "link": "https://example.com/hist_lect"
+  },
+  {
+    "title": "Present Simple vs Present Continuous",
+    "subject": "Иностранный язык",
+    "type": "практика",
+    "link": "https://example.com/eng_pract"
+  },
+  {
+    "title": "Органическая химия: Углеводороды",
+    "subject": "Химия",
+    "type": "лекция",
+    "link": "https://example.com/chem_theory"
+  },
+  {
+    "title": "Разбор романа 'Война и мир'",
+    "subject": "Литература",
+    "type": "лекция",
+    "link": "https://example.com/lit_lect"
+  },
+  {
+    "title": "Сочинение по теме: Моя будущая профессия",
+    "subject": "Русский Язык",
+    "type": "практика",
+    "link": "https://example.com/rus_pract"
   }
 ]
