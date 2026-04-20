@@ -10,34 +10,43 @@
         :root { --neon-color: #bc13fe; }
         body { background: #000; min-height: 100vh; color: #fff; font-family: sans-serif; overflow-x: hidden; }
 
-        /* Шапка описания */
-        .hero-section { 
-            background: linear-gradient(135deg, rgba(188, 19, 254, 0.1) 0%, transparent 100%); 
-            border-radius: 40px; padding: 50px; margin-bottom: 40px; 
-            border: 1px solid rgba(255,255,255,0.05); 
-        }
+        /* Панель выбора цвета */
+        .theme-panel { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        .theme-btn { background: rgba(0,0,0,0.8); border: 2px solid var(--neon-color); padding: 8px 16px; border-radius: 8px; font-weight: 900; font-size: 10px; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 10px var(--neon-color); }
         
-        /* Кнопки разделов */
+        .color-menu { 
+            display: none; position: absolute; top: 50px; right: 0; 
+            background: rgba(10,10,10,0.98); border: 1px solid rgba(255,255,255,0.1); 
+            padding: 15px; border-radius: 20px; grid-template-columns: repeat(6, 1fr); 
+            gap: 8px; width: 250px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .color-dot { width: 30px; height: 30px; border-radius: 50%; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); transition: 0.2s; }
+        .color-dot:hover { transform: scale(1.2); border-color: #fff; }
+
+        /* Описание архива */
+        .hero-section { background: linear-gradient(135deg, rgba(188, 19, 254, 0.1) 0%, transparent 100%); border-radius: 40px; padding: 50px; margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.05); }
+        
         .tab-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px; margin: 0 auto 40px; }
         .section-tab { cursor: pointer; padding: 30px; border-radius: 25px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; text-align: center; font-size: 2rem; font-weight: 900; font-style: italic; text-transform: uppercase; }
         .section-tab.active { border: 2px solid var(--neon-color); box-shadow: 0 0 25px var(--neon-color); background: rgba(255,255,255,0.05); }
 
-        /* Карточки предметов */
         .subjects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
         .glass-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 40px 20px; border-radius: 35px; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .glass-card:hover { border-color: var(--neon-color); box-shadow: 0 0 20px var(--neon-color); transform: scale(1.02); }
 
         .subject-name { font-size: 1.8rem; font-weight: 900; text-transform: uppercase; text-align: center; margin-bottom: 25px; color: var(--neon-color); }
-        
-        #search { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 15px; padding: 18px 25px; width: 100%; outline: none; margin-bottom: 30px; font-size: 1.1rem; }
-        #search:focus { border-color: var(--neon-color); box-shadow: 0 0 15px var(--neon-color); }
-        
+        .btn-open { border: 1px solid rgba(255,255,255,0.2); padding: 12px 30px; border-radius: 15px; font-weight: 800; font-size: 11px; text-transform: uppercase; cursor: pointer; transition: 0.3s; width: 100%; text-align: center; background: transparent; color: white; }
+        .btn-open:hover { background: var(--neon-color); color: #000; box-shadow: 0 0 15px var(--neon-color); }
+
+        #search { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 15px; padding: 18px 25px; width: 100%; outline: none; margin-bottom: 30px; }
         .neon-text { text-shadow: 0 0 15px var(--neon-color); }
-        .theme-btn { position: fixed; top: 20px; right: 20px; z-index: 100; background: #000; border: 2px solid var(--neon-color); padding: 8px 15px; border-radius: 10px; font-weight: 900; font-size: 12px; cursor: pointer; box-shadow: 0 0 10px var(--neon-color); }
     </style>
 </head>
 <body class="px-6 py-10">
-    <button class="theme-btn" id="main-theme-btn">СТИЛЬ</button>
+    <div class="theme-panel">
+        <button onclick="toggleMenu()" id="main-theme-btn" class="theme-btn">Стиль</button>
+        <div id="color-menu" class="color-menu"></div>
+    </div>
 
     <div class="max-w-7xl mx-auto">
         <header class="text-center mb-10">
@@ -46,18 +55,13 @@
 
         <div class="hero-section animate__animated animate__fadeIn">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="max-w-2xl">
+                <div>
                     <h2 class="text-3xl font-bold mb-4 italic uppercase">Образовательный репозиторий</h2>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Добро пожаловать в структурированный архив учебных материалов. Мы разделили контент на лекционные и практические блоки для максимально быстрого поиска нужной темы.
-                    </p>
+                    <p class="text-gray-400 text-lg mb-6">Централизованное хранилище всех материалов ГТА. Выберите тип работ для начала.</p>
                     <div class="inline-block bg-white/5 border border-white/10 px-6 py-3 rounded-2xl">
-                        <span class="text-gray-500 font-bold uppercase text-xs block mb-1">Всего записей</span>
+                        <span class="text-gray-500 font-bold uppercase text-[10px] block">Всего материалов</span>
                         <span class="text-3xl font-black neon-text" id="stat-count">0</span>
                     </div>
-                </div>
-                <div class="hidden md:block text-right opacity-10 font-black text-9xl italic leading-none select-none">
-                    IMSIT<br>2026
                 </div>
             </div>
         </div>
@@ -67,8 +71,7 @@
             <div onclick="setSection('лекция')" id="tab-lect" class="section-tab">ЛЕКЦИИ</div>
         </div>
 
-        <input type="text" id="search" placeholder="Найти предмет (например: Математика)...">
-        
+        <input type="text" id="search" placeholder="Поиск предмета...">
         <div id="content" class="subjects-grid"></div>
     </div>
 
