@@ -14,7 +14,13 @@
             padding: 20px; border-radius: 20px; display: flex; justify-content: space-between; 
             align-items: center; margin-bottom: 12px; transition: 0.3s;
         }
-        .btn-link { background: var(--neon-color); color: #000; padding: 8px 20px; border-radius: 10px; font-weight: 900; text-decoration: none; text-transform: uppercase; font-size: 12px; }
+        .topic-row:hover { border-color: var(--neon-color); background: rgba(255,255,255,0.05); }
+        .btn-link { 
+            background: var(--neon-color); color: #000; padding: 10px 25px; 
+            border-radius: 12px; font-weight: 900; text-decoration: none; 
+            text-transform: uppercase; font-size: 12px; transition: 0.3s;
+        }
+        .btn-link:hover { filter: brightness(1.2); transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -25,6 +31,7 @@
     </div>
 
     <script>
+        // Подтягиваем выбранный пользователем цвет
         const savedColor = localStorage.getItem('user-neon') || '#bc13fe';
         document.documentElement.style.setProperty('--neon-color', savedColor);
 
@@ -34,11 +41,25 @@
         document.getElementById('subject-title').innerText = name;
 
         fetch('data.json').then(res => res.json()).then(data => {
-            const filtered = data.filter(i => i.subject === name && i.type.toLowerCase().replace('пратика', 'практика') === type.toLowerCase());
-            document.getElementById('topics-list').innerHTML = filtered.map(t => `
+            // Фильтруем данные по предмету и типу
+            const filtered = data.filter(i => 
+                i.subject === name && 
+                i.type.toLowerCase().replace('пратика', 'практика') === type.toLowerCase()
+            );
+
+            const container = document.getElementById('topics-list');
+            
+            if (filtered.length === 0) {
+                container.innerHTML = '<p class="text-gray-500 uppercase font-bold">Материалов пока нет...</p>';
+                return;
+            }
+
+            container.innerHTML = filtered.map(t => `
                 <div class="topic-row">
-                    <span class="font-bold uppercase">${t.title}</span>
-                    <a href="https://t.me/arhivImsita" target="_blank" class="btn-link">В ТЕЛЕГРАМ</a>
+                    <span class="font-bold uppercase tracking-tight">${t.title}</span>
+                    <a href="${t.link}" target="_blank" class="btn-link">
+                        Открыть Диск
+                    </a>
                 </div>
             `).join('');
         });
