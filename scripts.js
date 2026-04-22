@@ -59,7 +59,7 @@ function render() {
     contentDiv.innerHTML = unique.map(subject => `
         <div class="glass-card animate__animated animate__fadeInUp">
             <div class="text-xl font-black uppercase mb-4" style="line-height: 1.1;">${subject}</div>
-            <button class="btn-open" onclick="window.location.href='subject.html?name=${encodeURIComponent(subject)}&type=${encodeURIComponent(currentSection)}'">Открыть темы</button>
+            <button class="btn-open" onclick="window.location.href='subject.html?name=${encodeURIComponent(subject)}&type=${currentSection}'">Открыть темы</button>
         </div>
     `).join('');
 }

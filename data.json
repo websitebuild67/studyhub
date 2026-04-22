@@ -1,132 +1,186 @@
 [
   {
-    "title": "Практическая 1 - Present Simple",
-    "subject": "Английский язык",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/eng1"
-  },
-  {
-    "title": "Практическая 2 - Modal Verbs",
-    "subject": "Английский язык",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/eng2"
-  },
-  {
-    "title": "Лекция 1 - Грамматика английского языка",
+    "title": "Лекция 1 - Present Simple",
     "subject": "Английский язык",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/eng_lect1"
   },
   {
-    "title": "Лекция 2 - Особенности произношения",
+    "title": "Лекция 2 - Present Continuous",
     "subject": "Английский язык",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/eng_lect2"
   },
   {
-    "title": "Практическая 1 - Клетка и её органоиды",
-    "subject": "Биология",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/bio1"
+    "title": "Лекция 3 - Past Simple",
+    "subject": "Английский язык",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/eng_lect3"
   },
   {
-    "title": "Практическая 2 - Фотосинтез и дыхание",
-    "subject": "Биология",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/bio2"
+    "title": "Лекция 4 - Modal Verbs",
+    "subject": "Английский язык",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/eng_lect4"
   },
   {
-    "title": "Лабораторная 1 - Экосистемы",
-    "subject": "Биология",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/bio3"
+    "title": "Лекция 5 - Passive Voice",
+    "subject": "Английский язык",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/eng_lect5"
   },
   {
-    "title": "Лекция 1 - Основы биологии",
+    "title": "Практика 1 - Грамматика",
+    "subject": "Английский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/eng_pract1"
+  },
+  {
+    "title": "Практика 2 - Чтение и понимание",
+    "subject": "Английский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/eng_pract2"
+  },
+  {
+    "title": "Практика 3 - Письмо",
+    "subject": "Английский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/eng_pract3"
+  },
+  {
+    "title": "Практика 4 - Аудирование",
+    "subject": "Английский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/eng_pract4"
+  },
+  {
+    "title": "Практика 5 - Разговорная речь",
+    "subject": "Английский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/eng_pract5"
+  },
+  {
+    "title": "Лекция 1 - Клетка",
     "subject": "Биология",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/bio_lect1"
   },
   {
-    "title": "Лекция 2 - Молекулярная биология",
+    "title": "Лекция 2 - Фотосинтез",
     "subject": "Биология",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/bio_lect2"
   },
   {
-    "title": "Практическая 1 - Физическая география",
-    "subject": "География",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/geo1"
+    "title": "Лекция 3 - Дыхание",
+    "subject": "Биология",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/bio_lect3"
   },
   {
-    "title": "Практическая 2 - Карты и масштабы",
-    "subject": "География",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/geo2"
+    "title": "Лекция 4 - Экосистемы",
+    "subject": "Биология",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/bio_lect4"
   },
   {
-    "title": "Лекция 1 - Физическая география планеты",
+    "title": "Лекция 5 - Эволюция",
+    "subject": "Биология",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/bio_lect5"
+  },
+  {
+    "title": "Практика 1 - Микроскопия",
+    "subject": "Биология",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/bio_pract1"
+  },
+  {
+    "title": "Практика 2 - Препараты",
+    "subject": "Биология",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/bio_pract2"
+  },
+  {
+    "title": "Практика 3 - Определение видов",
+    "subject": "Биология",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/bio_pract3"
+  },
+  {
+    "title": "Практика 4 - Анатомия",
+    "subject": "Биология",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/bio_pract4"
+  },
+  {
+    "title": "Практика 5 - Физиология",
+    "subject": "Биология",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/bio_pract5"
+  },
+  {
+    "title": "Лекция 1 - Физическая география",
     "subject": "География",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/geo_lect1"
   },
   {
-    "title": "Лекция 2 - Климаты и природные зоны",
+    "title": "Лекция 2 - Карты и масштабы",
     "subject": "География",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/geo_lect2"
   },
   {
-    "title": "Практическая 1 - Основы программирования",
-    "subject": "Информатика",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/example1"
+    "title": "Лекция 3 - Климаты",
+    "subject": "География",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/geo_lect3"
   },
   {
-    "title": "Практическая 2 - Переменные и типы данных",
-    "subject": "Информатика",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/example2"
+    "title": "Лекция 4 - Природные зоны",
+    "subject": "География",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/geo_lect4"
   },
   {
-    "title": "Лабораторная 1 - Циклы и условия",
-    "subject": "Информатика",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/example3"
+    "title": "Лекция 5 - Население",
+    "subject": "География",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/geo_lect5"
   },
   {
-    "title": "Лабораторная 2 - Функции в Python",
-    "subject": "Информатика",
+    "title": "Практика 1 - Работа с картами",
+    "subject": "География",
     "type": "практика",
-    "link": "https://disk.yandex.ru/d/example4"
+    "link": "https://disk.yandex.ru/d/geo_pract1"
   },
   {
-    "title": "Контрольная 1 - Основы объектно-ориентированного программирования",
-    "subject": "Информатика",
+    "title": "Практика 2 - Координаты",
+    "subject": "География",
     "type": "практика",
-    "link": "https://disk.yandex.ru/d/example5"
+    "link": "https://disk.yandex.ru/d/geo_pract2"
   },
   {
-    "title": "Самостоятельная 1 - Алгоритмы сортировки",
-    "subject": "Информатика",
+    "title": "Практика 3 - Полезные ископаемые",
+    "subject": "География",
     "type": "практика",
-    "link": "https://disk.yandex.ru/d/example6"
+    "link": "https://disk.yandex.ru/d/geo_pract3"
   },
   {
-    "title": "Самостоятельная 2 - Работа со строками",
-    "subject": "Информатика",
+    "title": "Практика 4 - Экономика стран",
+    "subject": "География",
     "type": "практика",
-    "link": "https://disk.yandex.ru/d/example7"
+    "link": "https://disk.yandex.ru/d/geo_pract4"
   },
   {
-    "title": "Практическая 3 - Работа с файлами",
-    "subject": "Информатика",
+    "title": "Практика 5 - Политическая карта",
+    "subject": "География",
     "type": "практика",
-    "link": "https://disk.yandex.ru/d/example8"
+    "link": "https://disk.yandex.ru/d/geo_pract5"
   },
   {
-    "title": "Лекция 1 - История информатики",
+    "title": "Лекция 1 - Основы программирования",
     "subject": "Информатика",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/inf_lect1"
@@ -138,175 +192,415 @@
     "link": "https://disk.yandex.ru/d/inf_lect2"
   },
   {
-    "title": "Практическая 1 - Древний мир",
-    "subject": "История",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/hist1"
+    "title": "Лекция 3 - Алгоритмы",
+    "subject": "Информатика",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/inf_lect3"
   },
   {
-    "title": "Практическая 2 - Средние века",
-    "subject": "История",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/hist2"
+    "title": "Лекция 4 - Базы данных",
+    "subject": "Информатика",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/inf_lect4"
   },
   {
-    "title": "Лекция 1 - Всемирная история",
+    "title": "Лекция 5 - Веб-технологии",
+    "subject": "Информатика",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/inf_lect5"
+  },
+  {
+    "title": "Практика 1 - Python",
+    "subject": "Информатика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/inf_pract1"
+  },
+  {
+    "title": "Практика 2 - Java",
+    "subject": "Информатика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/inf_pract2"
+  },
+  {
+    "title": "Практика 3 - C++",
+    "subject": "Информатика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/inf_pract3"
+  },
+  {
+    "title": "Практика 4 - HTML/CSS/JS",
+    "subject": "Информатика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/inf_pract4"
+  },
+  {
+    "title": "Практика 5 - SQL",
+    "subject": "Информатика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/inf_pract5"
+  },
+  {
+    "title": "Лекция 1 - Древний мир",
     "subject": "История",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/hist_lect1"
   },
   {
-    "title": "Лекция 2 - История России",
+    "title": "Лекция 2 - Средние века",
     "subject": "История",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/hist_lect2"
   },
   {
-    "title": "Практическая 1 - Анализ художественного текста",
-    "subject": "Литература",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/lit1"
+    "title": "Лекция 3 - Новое время",
+    "subject": "История",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/hist_lect3"
   },
   {
-    "title": "Практическая 2 - Поэтика и стиховедение",
-    "subject": "Литература",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/lit2"
+    "title": "Лекция 4 - Новейшая история",
+    "subject": "История",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/hist_lect4"
   },
   {
-    "title": "Лекция 1 - Русская литература XIX века",
+    "title": "Лекция 5 - История России",
+    "subject": "История",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/hist_lect5"
+  },
+  {
+    "title": "Практика 1 - Анализ источников",
+    "subject": "История",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/hist_pract1"
+  },
+  {
+    "title": "Практика 2 - Хронология",
+    "subject": "История",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/hist_pract2"
+  },
+  {
+    "title": "Практика 3 - Империи",
+    "subject": "История",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/hist_pract3"
+  },
+  {
+    "title": "Практика 4 - Революции",
+    "subject": "История",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/hist_pract4"
+  },
+  {
+    "title": "Практика 5 - Войны",
+    "subject": "История",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/hist_pract5"
+  },
+  {
+    "title": "Лекция 1 - Русская литература",
     "subject": "Литература",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/lit_lect1"
   },
   {
-    "title": "Лекция 2 - Зарубежная литература",
+    "title": "Лекция 2 - Мировая литература",
     "subject": "Литература",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/lit_lect2"
   },
   {
-    "title": "Практическая 1 - Алгебра и функции",
-    "subject": "Математика",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/math1"
+    "title": "Лекция 3 - Театр",
+    "subject": "Литература",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/lit_lect3"
   },
   {
-    "title": "Практическая 2 - Геометрия и векторы",
-    "subject": "Математика",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/math2"
+    "title": "Лекция 4 - Поэзия",
+    "subject": "Литература",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/lit_lect4"
   },
   {
-    "title": "Лабораторная 1 - Производная и интегралы",
-    "subject": "Математика",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/math3"
+    "title": "Лекция 5 - Критика",
+    "subject": "Литература",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/lit_lect5"
   },
   {
-    "title": "Лекция 1 - Основы математического анализа",
+    "title": "Практика 1 - Анализ текста",
+    "subject": "Литература",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/lit_pract1"
+  },
+  {
+    "title": "Практика 2 - Сочинение",
+    "subject": "Литература",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/lit_pract2"
+  },
+  {
+    "title": "Практика 3 - Характеристика героев",
+    "subject": "Литература",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/lit_pract3"
+  },
+  {
+    "title": "Практика 4 - Стилистика",
+    "subject": "Литература",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/lit_pract4"
+  },
+  {
+    "title": "Практика 5 - Сравнительный анализ",
+    "subject": "Литература",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/lit_pract5"
+  },
+  {
+    "title": "Лекция 1 - Алгебра",
     "subject": "Математика",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/math_lect1"
   },
   {
-    "title": "Лекция 2 - Линейная алгебра",
+    "title": "Лекция 2 - Геометрия",
     "subject": "Математика",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/math_lect2"
   },
   {
-    "title": "Практическая 1 - Человек и общество",
-    "subject": "Обществознание",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/social1"
+    "title": "Лекция 3 - Тригонометрия",
+    "subject": "Математика",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/math_lect3"
   },
   {
-    "title": "Практическая 2 - Право и политика",
-    "subject": "Обществознание",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/social2"
+    "title": "Лекция 4 - Функции",
+    "subject": "Математика",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/math_lect4"
   },
   {
-    "title": "Лекция 1 - Основы обществознания",
+    "title": "Лекция 5 - Производные",
+    "subject": "Математика",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/math_lect5"
+  },
+  {
+    "title": "Практика 1 - Линейные уравнения",
+    "subject": "Математика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/math_pract1"
+  },
+  {
+    "title": "Практика 2 - Квадратные уравнения",
+    "subject": "Математика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/math_pract2"
+  },
+  {
+    "title": "Практика 3 - Планиметрия",
+    "subject": "Математика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/math_pract3"
+  },
+  {
+    "title": "Практика 4 - Стереометрия",
+    "subject": "Математика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/math_pract4"
+  },
+  {
+    "title": "Практика 5 - Интегралы",
+    "subject": "Математика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/math_pract5"
+  },
+  {
+    "title": "Лекция 1 - Обществоведение",
     "subject": "Обществознание",
     "type": "лекция",
-    "link": "https://disk.yandex.ru/d/social_lect1"
+    "link": "https://disk.yandex.ru/d/soc_lect1"
   },
   {
-    "title": "Лекция 2 - Экономика и финансы",
+    "title": "Лекция 2 - Право",
     "subject": "Обществознание",
     "type": "лекция",
-    "link": "https://disk.yandex.ru/d/social_lect2"
+    "link": "https://disk.yandex.ru/d/soc_lect2"
   },
   {
-    "title": "Практическая 1 - Фонетика и орфоэпия",
-    "subject": "Русский язык",
+    "title": "Лекция 3 - Экономика",
+    "subject": "Обществознание",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/soc_lect3"
+  },
+  {
+    "title": "Лекция 4 - Политика",
+    "subject": "Обществознание",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/soc_lect4"
+  },
+  {
+    "title": "Лекция 5 - Социология",
+    "subject": "Обществознание",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/soc_lect5"
+  },
+  {
+    "title": "Практика 1 - Анализ законов",
+    "subject": "Обществознание",
     "type": "практика",
-    "link": "https://disk.yandex.ru/d/rus1"
+    "link": "https://disk.yandex.ru/d/soc_pract1"
   },
   {
-    "title": "Практическая 2 - Синтаксис и пунктуация",
-    "subject": "Русский язык",
+    "title": "Практика 2 - Экономические системы",
+    "subject": "Обществознание",
     "type": "практика",
-    "link": "https://disk.yandex.ru/d/rus2"
+    "link": "https://disk.yandex.ru/d/soc_pract2"
   },
   {
-    "title": "Лабораторная 1 - Морфология",
-    "subject": "Русский язык",
+    "title": "Практика 3 - Государство",
+    "subject": "Обществознание",
     "type": "практика",
-    "link": "https://disk.yandex.ru/d/rus3"
+    "link": "https://disk.yandex.ru/d/soc_pract3"
   },
   {
-    "title": "Лекция 1 - Грамматика русского языка",
+    "title": "Практика 4 - Права человека",
+    "subject": "Обществознание",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/soc_pract4"
+  },
+  {
+    "title": "Практика 5 - Конституция",
+    "subject": "Обществознание",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/soc_pract5"
+  },
+  {
+    "title": "Лекция 1 - Фонетика",
     "subject": "Русский язык",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/rus_lect1"
   },
   {
-    "title": "Лекция 2 - Стилистика и риторика",
+    "title": "Лекция 2 - Морфология",
     "subject": "Русский язык",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/rus_lect2"
   },
   {
-    "title": "Практическая 1 - Механика",
-    "subject": "Физика",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/phys1"
+    "title": "Лекция 3 - Синтаксис",
+    "subject": "Русский язык",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/rus_lect3"
   },
   {
-    "title": "Практическая 2 - Электричество и магнетизм",
-    "subject": "Физика",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/phys2"
+    "title": "Лекция 4 - Пунктуация",
+    "subject": "Русский язык",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/rus_lect4"
   },
   {
-    "title": "Лекция 1 - Механика и кинематика",
+    "title": "Лекция 5 - Стилистика",
+    "subject": "Русский язык",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/rus_lect5"
+  },
+  {
+    "title": "Практика 1 - Орфография",
+    "subject": "Русский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/rus_pract1"
+  },
+  {
+    "title": "Практика 2 - Пунктуация",
+    "subject": "Русский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/rus_pract2"
+  },
+  {
+    "title": "Практика 3 - Грамматика",
+    "subject": "Русский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/rus_pract3"
+  },
+  {
+    "title": "Практика 4 - Сочинение",
+    "subject": "Русский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/rus_pract4"
+  },
+  {
+    "title": "Практика 5 - Изложение",
+    "subject": "Русский язык",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/rus_pract5"
+  },
+  {
+    "title": "Лекция 1 - Механика",
     "subject": "Физика",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/phys_lect1"
   },
   {
-    "title": "Лекция 2 - Термодинамика и волны",
+    "title": "Лекция 2 - Энергия",
     "subject": "Физика",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/phys_lect2"
   },
   {
-    "title": "Тема: Ионная Связь 11.02 — БЕСПЛАТНО",
-    "subject": "Химия",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/elvG-bTn5eZ5IQ"
+    "title": "Лекция 3 - Электричество",
+    "subject": "Физика",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/phys_lect3"
   },
   {
-    "title": "Тема: Константа диссоциации 15.05 — БЕСПЛАТНО",
-    "subject": "Химия",
-    "type": "практика",
-    "link": "https://disk.yandex.ru/d/XQYQU7yTgJNAOQ"
+    "title": "Лекция 4 - Магнетизм",
+    "subject": "Физика",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/phys_lect4"
   },
   {
-    "title": "Лекция 1 - Основы химии и химические реакции",
+    "title": "Лекция 5 - Оптика",
+    "subject": "Физика",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/phys_lect5"
+  },
+  {
+    "title": "Практика 1 - Измерения",
+    "subject": "Физика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/phys_pract1"
+  },
+  {
+    "title": "Практика 2 - Движение",
+    "subject": "Физика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/phys_pract2"
+  },
+  {
+    "title": "Практика 3 - Волны",
+    "subject": "Физика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/phys_pract3"
+  },
+  {
+    "title": "Практика 4 - Электрические цепи",
+    "subject": "Физика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/phys_pract4"
+  },
+  {
+    "title": "Практика 5 - Лабораторные работы",
+    "subject": "Физика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/phys_pract5"
+  },
+  {
+    "title": "Лекция 1 - Неорганическая химия",
     "subject": "Химия",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/chem_lect1"
@@ -316,5 +610,53 @@
     "subject": "Химия",
     "type": "лекция",
     "link": "https://disk.yandex.ru/d/chem_lect2"
+  },
+  {
+    "title": "Лекция 3 - Химические реакции",
+    "subject": "Химия",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/chem_lect3"
+  },
+  {
+    "title": "Лекция 4 - Периодическая система",
+    "subject": "Химия",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/chem_lect4"
+  },
+  {
+    "title": "Лекция 5 - Термодинамика",
+    "subject": "Химия",
+    "type": "лекция",
+    "link": "https://disk.yandex.ru/d/chem_lect5"
+  },
+  {
+    "title": "Практика 1 - Ионные связи",
+    "subject": "Химия",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/chem_pract1"
+  },
+  {
+    "title": "Практика 2 - Кислоты и основания",
+    "subject": "Химия",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/chem_pract2"
+  },
+  {
+    "title": "Практика 3 - Окислительно-восстановительные реакции",
+    "subject": "Химия",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/chem_pract3"
+  },
+  {
+    "title": "Практика 4 - Скорость реакции",
+    "subject": "Химия",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/chem_pract4"
+  },
+  {
+    "title": "Практика 5 - Растворы",
+    "subject": "Химия",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/chem_pract5"
   }
 ]

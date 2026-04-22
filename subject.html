@@ -40,14 +40,14 @@
 
         const params = new URLSearchParams(window.location.search);
         const name = params.get('name');
-        const type = decodeURIComponent(params.get('type'));
+        const type = params.get('type');
         document.getElementById('subject-title').innerText = name;
 
         fetch('data.json').then(res => res.json()).then(data => {
             // Фильтруем данные по предмету и типу
             const filtered = data.filter(i => 
                 i.subject === name && 
-                i.type.toLowerCase().replace('пратика', 'практика') === type.toLowerCase()
+                i.type === type
             );
 
             const container = document.getElementById('topics-list');
