@@ -26,31 +26,31 @@
   {
     "title": "Лабораторная 1 - Циклы и условия",
     "subject": "Информатика",
-    "type": "лабораторная",
+    "type": "практика",
     "link": "https://disk.yandex.ru/d/example3"
   },
   {
     "title": "Лабораторная 2 - Функции в Python",
     "subject": "Информатика",
-    "type": "лабораторная",
+    "type": "практика",
     "link": "https://disk.yandex.ru/d/example4"
   },
   {
     "title": "Контрольная 1 - Основы объектно-ориентированного программирования",
     "subject": "Информатика",
-    "type": "контрольная",
+    "type": "практика",
     "link": "https://disk.yandex.ru/d/example5"
   },
   {
     "title": "Самостоятельная 1 - Алгоритмы сортировки",
     "subject": "Информатика",
-    "type": "самостоятельная",
+    "type": "практика",
     "link": "https://disk.yandex.ru/d/example6"
   },
   {
     "title": "Самостоятельная 2 - Работа со строками",
     "subject": "Информатика",
-    "type": "самостоятельная",
+    "type": "практика",
     "link": "https://disk.yandex.ru/d/example7"
   },
   {
