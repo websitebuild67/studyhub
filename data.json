@@ -10,5 +10,53 @@
     "subject": "Химия",
     "type": "практика",
     "link": "https://disk.yandex.ru/d/XQYQU7yTgJNAOQ"
+  },
+  {
+    "title": "Практическая 1 - Основы программирования",
+    "subject": "Информатика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/example1"
+  },
+  {
+    "title": "Практическая 2 - Переменные и типы данных",
+    "subject": "Информатика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/example2"
+  },
+  {
+    "title": "Лабораторная 1 - Циклы и условия",
+    "subject": "Информатика",
+    "type": "лабораторная",
+    "link": "https://disk.yandex.ru/d/example3"
+  },
+  {
+    "title": "Лабораторная 2 - Функции в Python",
+    "subject": "Информатика",
+    "type": "лабораторная",
+    "link": "https://disk.yandex.ru/d/example4"
+  },
+  {
+    "title": "Контрольная 1 - Основы объектно-ориентированного программирования",
+    "subject": "Информатика",
+    "type": "контрольная",
+    "link": "https://disk.yandex.ru/d/example5"
+  },
+  {
+    "title": "Самостоятельная 1 - Алгоритмы сортировки",
+    "subject": "Информатика",
+    "type": "самостоятельная",
+    "link": "https://disk.yandex.ru/d/example6"
+  },
+  {
+    "title": "Самостоятельная 2 - Работа со строками",
+    "subject": "Информатика",
+    "type": "самостоятельная",
+    "link": "https://disk.yandex.ru/d/example7"
+  },
+  {
+    "title": "Практическая 3 - Работа с файлами",
+    "subject": "Информатика",
+    "type": "практика",
+    "link": "https://disk.yandex.ru/d/example8"
   }
 ]
